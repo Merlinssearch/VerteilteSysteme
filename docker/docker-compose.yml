@@ -1,0 +1,13 @@
+name: ai1015g11
+
+services:
+  controller:
+    image: controller:latest
+    ports:
+      - "3000:8080"
+    restart: unless-stopped
+
+  robot:
+    image: robot:latest
+    expose:
+      - 3000
